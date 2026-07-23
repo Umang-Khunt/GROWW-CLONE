@@ -47,7 +47,8 @@ const Loginx = () => {
         console.log(data);
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");
+           localStorage.setItem("isLoggedIn", "true");
+          navigate("/dashboard/");
         }, 2000);
       } else {
         handleError(message);
@@ -93,6 +94,9 @@ const Loginx = () => {
         </span>
       </form>
       <ToastContainer />
+
+    <Link to="/zerodha/" className="btn btn-blue" >Go Back</Link>
+
     </div>
   );
 };

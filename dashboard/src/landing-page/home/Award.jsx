@@ -28,7 +28,7 @@ export default function Award() {
                     </ul>
                 </div>
             </div>
-            <img src='media/images/pressLogos.png' className='p-3 award-presslogos ' />
+            <img src='/media/images/pressLogos.png' className='p-3 award-presslogos ' />
             </div>
         </div>
     </div>

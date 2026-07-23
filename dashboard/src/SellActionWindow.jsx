@@ -17,7 +17,7 @@ const SellActionWindow = ({ uid,price }) => {
       qty: stockQuantity,
       price: stockPrice,
       mode: "Sell",
-    });
+    },{ withCredentials: true });
 
    const { closeSellWindow } = useContext(GeneralContext);
   };
@@ -27,7 +27,7 @@ const SellActionWindow = ({ uid,price }) => {
   };
 
   return (
-    <div className="container" id="buy-window" draggable="true">
+    <div className="buy-container" id="buy-window" draggable="true">
       <h3>{uid}</h3>
       <div className="regular-order">
         <div className="inputs">

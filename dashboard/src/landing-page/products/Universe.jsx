@@ -9,7 +9,7 @@ function Universe() {
         <div className="col-1"></div>
         <div className="col">
 
-         <ProductCard productImage="media/images/zerodhaFundhouse.png" productDescription="Our asset management venture
+         <ProductCard productImage="/media/images/zerodhaFundhouse.png" productDescription="Our asset management venture
 that is creating simple and transparent index funds to help you save for your goals." />
          <ProductCard productImage="/media/images/streakLogo.png" productDescription="Systematic trading platform
 that allows you to create and backtest strategies without coding."/>
@@ -21,7 +21,7 @@ that allows you to create and backtest strategies without coding."/>
            <ProductCard productImage="/media/images/smallcaseLogo.png" productDescription="Thematic investing platform that helps you invest in diversified baskets of stocks on ETFs."/>
         </div>
         <div className="col">
-            <ProductCard productImage="media/images/tijori.svg" productDescription="Investment research platform that offers detailed insights on stocks, sectors, supply chains, and more."/>
+            <ProductCard productImage="/media/images/tijori.svg" productDescription="Investment research platform that offers detailed insights on stocks, sectors, supply chains, and more."/>
             
             <ProductCard productImage="/media/images/dittoLogo.png" productDescription="Personalized advice on life and health insurance. No spam and no mis-selling."/>
         </div>

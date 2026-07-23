@@ -5,8 +5,10 @@ function Orders() {
   let [allOrders,SetAllOrders]= useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/allorders").then((res)=>{
-      SetAllOrders(res.data);
+    axios.get("http://localhost:8080/allorders",{withCredentials:true}).then((res)=>{
+      let arr = res.data;
+      let newArr = arr.reverse();
+      SetAllOrders(newArr);
     })
   });
 

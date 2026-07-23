@@ -1,6 +1,6 @@
 import Menu from "./Menu";
 
-function TopBar() {
+function TopBar({Logout}) {
     return ( <>
     <div className="topbar-container">
       <div className="indices-container">
@@ -16,7 +16,7 @@ function TopBar() {
         </div>
       </div>
 
-      <Menu />
+      <Menu Logout={Logout}/>
     </div>
     
     </> );

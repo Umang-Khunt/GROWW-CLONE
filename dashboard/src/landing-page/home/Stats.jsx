@@ -15,7 +15,7 @@ function Stats() {
                     <p className='text-muted' >With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.</p>
                 </div>
                 <div className="col">
-                    <img src='media/images/ecosystem.png' className='home-stats-ecosystem ms-3' />
+                    <img src='/media/images/ecosystem.png' className='home-stats-ecosystem ms-3' />
 
                    <div className='ps-5 ms-5' >
                     <a className='ms-5'></a>

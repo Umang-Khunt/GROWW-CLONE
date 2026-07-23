@@ -8,6 +8,10 @@ const HoldingSchema = new Schema({
   net: String,
   day: String,
   isLoss: Boolean,
+   owner:{
+    type:Schema.Types.ObjectId,
+    ref:"UserModel",
+  },
 });
 
 module.exports = {HoldingSchema};

@@ -24,11 +24,11 @@ function Dashboard() {
           <div className="col-8 p-0 mb-auto">
             <Routes>
               <Route exact path="/" element={<Summary />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/holdings" element={<Holdings />} />
-              <Route path="/positions" element={<Positions />} />
-              <Route path="/funds" element={<Funds />} />
-              <Route path="/apps" element={<Apps />} />
+              <Route path="orders" element={<Orders />} />
+              <Route path="holdings" element={<Holdings />} />
+              <Route path="positions" element={<Positions />} />
+              <Route path="funds" element={<Funds />} />
+              <Route path="apps" element={<Apps />} />
             </Routes>
           </div>
         </div>

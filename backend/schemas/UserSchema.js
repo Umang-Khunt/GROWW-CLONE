@@ -19,6 +19,7 @@ const UserSchema = new Schema({
     type: Date,
     default: new Date(),
   },
+ 
   fund:{
     type:Number,
     default:0

@@ -10,7 +10,7 @@ function Team() {
           <div className="col-2"></div>
           <div className="col-3 text-center">
             <img
-              src="media/images/nithinKamath.jpg"
+              src="/media/images/nithinKamath.jpg"
               className="ms-auto  border "
               style={{ width: "90%", borderRadius: "50%" }}
             />

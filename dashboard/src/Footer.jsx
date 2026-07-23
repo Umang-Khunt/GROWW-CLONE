@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-1"></div>
           <div className="col-3">
-            <img src="media/images/logo.svg" className="footer-logo" />
+            <img src="/media/images/logo.svg" className="footer-logo" />
             <p className="footer-copyrignt mt-4 ">
               © 2010 - 2026, Zerodha Broking Ltd.
               <br />
@@ -41,8 +41,8 @@ export default function Footer() {
               </a>
             </div>
             <div className="mt-4">
-              <img src="media/images/appstoreBadge.svg" className="me-4" />
-              <img src="media/images/googlePlayBadge.svg" />
+              <img src="/media/images/appstoreBadge.svg" className="me-4" />
+              <img src="/media/images/googlePlayBadge.svg" />
             </div>
           </div>
           <div className="col">

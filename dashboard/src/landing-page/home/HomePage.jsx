@@ -5,7 +5,6 @@ import Stats from "./Stats";
 import Education from "./Education";
 import OpenAccount from "../../OpenAccount";
 import Pricing from "./Pricing";
-
 export default function HomePage() {
   return (
     <>

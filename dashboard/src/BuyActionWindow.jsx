@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
@@ -7,27 +7,35 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
-const BuyActionWindow = ({ uid,price }) => {
+const BuyActionWindow = ({ uid, price }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(price);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:8080/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "Buy",
-    });
+    const { data } = axios.post(
+      "http://localhost:8080/newOrder",
+      {
+        name: uid,
+        qty: stockQuantity,
+        price: stockPrice,
+        mode: "Buy",
+      },
+      { withCredentials: true },
+    );
 
-   const { closeBuyWindow } = useContext(GeneralContext);
+    if (!data.success) {
+      
+    }
+
+    const { closeBuyWindow } = useContext(GeneralContext);
   };
 
   const handleCancelClick = () => {
-   const { closeBuyWindow } = useContext(GeneralContext);
+    const { closeBuyWindow } = useContext(GeneralContext);
   };
 
   return (
-    <div className="container" id="buy-window" draggable="true">
+    <div className="buy-container" id="buy-window" draggable="true">
       <h3>{uid}</h3>
       <div className="regular-order">
         <div className="inputs">

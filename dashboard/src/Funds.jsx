@@ -1,10 +1,38 @@
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AddFundWindow from "./AddFundWindow";
+import WithdrawFundWindow from "./WithdrawFundWindow";
 
 function Funds() {
+  let [availableMargin,SetAvailableMargin] = useState(0);
+  let [usedMargin,SetUsedMargin] = useState(0);
+  useEffect(()=>{
+    axios.get("http://localhost:8080/funds",{withCredentials:true}).then((res)=>{
+      
+      SetAvailableMargin(res.data.fund);
+      SetUsedMargin(res.data.usedMargin);
+    })
+  });
+
+  let [isAddFundOpen,SetIsAddFundOpen] = useState(false);
+  let [isWithdrawOpen,SetIsWithdrawOpen] = useState(false);
+
+  const handleAddFund = ()=>{
+    isAddFundOpen ? SetIsAddFundOpen(false) : SetIsAddFundOpen(true);
+    }
+     const handleWithdrawFund = ()=>{
+    isWithdrawOpen ? SetIsWithdrawOpen(false) : SetIsWithdrawOpen(true);
+    }
+
     return ( <> <div className="funds">
-        <p>Instant, zero-cost fund transfers with UPI </p>
-        <Link className="btn btn-green">Add funds</Link>
-        <Link className="btn btn-blue">Withdraw</Link>
+        {!isAddFundOpen &&<div> <p>Instant, zero-cost fund transfers with UPI </p> 
+         <Link className="btn btn-green" onClick={handleAddFund} >Add funds</Link>
+       
+        <Link className="btn btn-blue" onClick={handleWithdrawFund} >Withdraw</Link></div>}
+         {isAddFundOpen && <AddFundWindow handleAddFund={handleAddFund} />}
+          {isWithdrawOpen && <WithdrawFundWindow handleWithdrawFund={handleWithdrawFund} />}
       </div>
 
       <div className="row">
@@ -16,15 +44,15 @@ function Funds() {
           <div className="table">
             <div className="data">
               <p>Available margin</p>
-              <p className="imp colored">4,043.10</p>
+              <p className="imp colored">{availableMargin}</p>
             </div>
             <div className="data">
               <p>Used margin</p>
-              <p className="imp">3,757.30</p>
+              <p className="imp">{usedMargin}</p>
             </div>
             <div className="data">
               <p>Available cash</p>
-              <p className="imp">4,043.10</p>
+              <p className="imp">{availableMargin}</p>
             </div>
             <hr />
             <div className="data">

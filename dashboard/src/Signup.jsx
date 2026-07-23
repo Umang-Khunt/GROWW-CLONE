@@ -42,7 +42,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");
+          navigate("/dashboard/");
         }, 1000);
       } else {
         handleError(message);
@@ -98,6 +98,7 @@ const Signup = () => {
         </span>
       </form>
       <ToastContainer />
+      <Link to="/zerodha/" className="btn btn-blue" >Go Back</Link>
     </div>
   );
 };
